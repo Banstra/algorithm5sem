@@ -1,0 +1,3 @@
+N = int(input("Введите количество элементов массива: "))
+array = [2 * i + 1 for i in range(N)]
+print(*array)
