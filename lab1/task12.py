@@ -1,0 +1,4 @@
+x = float(input("Введите x: "))
+t = (x - 3) ** 3
+y = 4 * t ** 2 - 7 * t + 2
+print(f"y = {y}")
