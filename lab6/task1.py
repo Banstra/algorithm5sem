@@ -1,3 +1,4 @@
+# Функция для обхода матрицы по спирали против часовой стрелки
 def spiral_counterclockwise(matrix):
 	n = len(matrix)
 	result = []

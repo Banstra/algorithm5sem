@@ -1,13 +1,15 @@
-n = int(input("Введите количество элементов массива: "))
-values = list(map(int, input("Введите элементы через пробел: ").split()))[:n]
+# Дано целое число N, а также массив из N целых чисел. Переставить элементы массива в обратном порядке (первый элемент становится последним, второй — предпоследним и т.д.).
+def reverse_array_slicing(arr):
 
-left, right = 0, len(values) - 1
-result = []
-while left <= right:
-	result.append(values[left])
-	left += 1
-	if left <= right:
-		result.append(values[right])
-		right -= 1
+    return arr[::-1]
 
-print(*result)
+n = int(input("Введите количество элементов N: "))
+print(f"Введите {n} целых чисел через пробел:")
+array = list(map(int, input().split()))
+
+if len(array) != n:
+    print(f"Ошибка: введено {len(array)} чисел вместо {n}")
+else:
+    reversed_array = reverse_array_slicing(array)
+    print("Исходный массив:", array)
+    print("Перевернутый массив:", reversed_array)

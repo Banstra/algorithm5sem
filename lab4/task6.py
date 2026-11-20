@@ -1,3 +1,4 @@
+# Дана строка. Переставить слова в строке в обратном порядке.
 def reverse_words(text: str) -> str:
     words = text.split()
 
@@ -8,7 +9,7 @@ def reverse_words(text: str) -> str:
 
     return " ".join(reverse_from(len(words) - 1))
 
-if __name__ == "__main__":
-    input_text = input("Введите текст: ")
-    reversed_text = reverse_words(input_text)
-    print(f"Текст с обратным порядком слов: {reversed_text}")
+
+input_text = input("Введите текст: ")
+reversed_text = reverse_words(input_text)
+print(f"Текст с обратным порядком слов: {reversed_text}")

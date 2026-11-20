@@ -1,5 +1,6 @@
 import math
 
+# Даны координаты двух точек на плоскости (x1, y1) и (x2, y2). Найти расстояние между ними.
 x1, y1, x2, y2 = map(float, input("Введите координаты двух точек (x1 y1 x2 y2): ").split())
-distance = math.hypot(x2 - x1, y2 - y1)
+distance = math.hypot(x2 - x1, y2 - y1) # Расстояние между точками
 print(f"Расстояние между точками: {distance}")

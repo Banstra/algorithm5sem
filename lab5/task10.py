@@ -1,3 +1,4 @@
+# Дано целое число N, а также массив из N действительных чисел. Найти номера первого и последнего одинаковых элементов массива.
 def find_duplicate_indices(values):
 	first_index = {}
 	for index, value in enumerate(values, start=1):

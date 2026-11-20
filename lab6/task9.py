@@ -1,3 +1,4 @@
+## Функция для сортировки строк матрицы по первому элементу каждой строки
 def sort_rows_by_first_element(matrix):
     return sorted(matrix, key=lambda row: row[0])
 

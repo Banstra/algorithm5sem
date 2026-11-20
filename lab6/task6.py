@@ -1,18 +1,42 @@
-def swap_row_min_max(matrix):
-	for row in matrix:
-		if not row:
-			continue
-		min_index = row.index(min(row))
-		max_index = row.index(max(row))
-		row[min_index], row[max_index] = row[max_index], row[min_index]
-	return matrix
+# Дано целое число m и натуральное число n. Найти номер столбца, все элементы которого являются нечетными числами.
+def find_column_all_odd(matrix):
+
+    if not matrix or not matrix[0]:
+        return -1
+    
+    m = len(matrix)      
+    n = len(matrix[0])   
+    
+    for col in range(n):
+        all_odd = True
+        for row in range(m):
+            if matrix[row][col] % 2 == 0: 
+                all_odd = False
+                break
+        if all_odd:
+            return col + 1
+    
+    return -1 
 
 
 if __name__ == "__main__":
-	m, n = map(int, input("Введите размерность матрицы: ").split())
-	matrix = [list(map(int, input("Введите строку матрицы: ").split())) for _ in range(m)]
-
-	swap_row_min_max(matrix)
-
-	for row in matrix:
-		print(*row)
+    try:
+        m, n = map(int, input("Введите размерность матрицы (m n): ").split())
+        print("Введите элементы матрицы построчно:")
+        matrix = [list(map(int, input(f"Строка {i+1}: ").split())) for i in range(m)]
+        
+        # Проверка корректности ввода
+        for i, row in enumerate(matrix):
+            if len(row) != n:
+                print(f"Ошибка: в строке {i+1} должно быть {n} элементов")
+                exit()
+        
+        result = find_column_all_odd(matrix)
+        
+        if result != -1:
+            print(f"Номер столбца, все элементы которого нечетные: {result}")
+        else:
+            print("Нет столбца, все элементы которого являются нечетными числами")
+            
+    except ValueError:
+        print("Ошибка ввода. Пожалуйста, введите целые числа.")

@@ -1,3 +1,4 @@
+# Функция для обмена местами столбцов с минимальным и максимальным элементами
 def swap_min_max_columns(matrix):
 	if not matrix or not matrix[0]:
 		return matrix

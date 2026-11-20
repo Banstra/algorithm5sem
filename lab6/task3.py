@@ -1,4 +1,4 @@
-
+## Дана матрица A(m,n). Найти номер столбца с наименьшим произведением элементов.
 rows, columns = map(int, input("Введите размерность матрицы: ").split())
 matrix = [list(map(int, input("Введите строку матрицы: ").split())) for _ in range(rows)]
 

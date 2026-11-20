@@ -1,3 +1,4 @@
+# Функция для подсчета элементов в каждом столбце, превышающих среднее значение столбца
 def count_above_column_average(matrix):
 
 	if not matrix:
@@ -15,7 +16,7 @@ def count_above_column_average(matrix):
 	return result
 
 
-if __name__ == "__main__":
-	rows, columns = map(int, input("Введите размерность матрицы: ").split())
-	matrix = [list(map(float, input("Введите строку матрицы: ").split())) for _ in range(rows)]
-	print(*count_above_column_average(matrix))
+
+rows, columns = map(int, input("Введите размерность матрицы: ").split())
+matrix = [list(map(float, input("Введите строку матрицы: ").split())) for _ in range(rows)]
+print(*count_above_column_average(matrix))

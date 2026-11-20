@@ -1,3 +1,4 @@
+# Дано целое число N. Решить задачу о ханойских башнях для N дисков.
 def hanoi(n, source, auxiliary, target):
 
     if n == 1:
@@ -9,6 +10,6 @@ def hanoi(n, source, auxiliary, target):
     hanoi(n - 1, auxiliary, source, target)
 
 
-# Пример использования
+
 n = int(input("Введите количество дисков: "))
 hanoi(n, 'A', 'B', 'C')

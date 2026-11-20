@@ -15,19 +15,19 @@ def binary_search_with_steps(arr, target):
         print(f"  Средний элемент: {arr[mid]}")
         
         if arr[mid] == target:
-            print(f"  ✓ Найдено! Элемент {target} находится по индексу {mid}")
+            print(f"Найдено! Элемент {target} находится по индексу {mid}")
             return mid
         elif arr[mid] < target:
-            print(f"  → {arr[mid]} < {target}, сдвигаем левую границу вправо")
+            print(f"  -> {arr[mid]} < {target}, сдвигаем левую границу вправо")
             left = mid + 1
         else:
-            print(f"  ← {arr[mid]} > {target}, сдвигаем правую границу влево")
+            print(f"  <- {arr[mid]} > {target}, сдвигаем правую границу влево")
             right = mid - 1
         
         step += 1
         print()
     
-    print(f"✗ Элемент {target} не найден")
+    print(f"Элемент {target} не найден")
     return -1
 
 

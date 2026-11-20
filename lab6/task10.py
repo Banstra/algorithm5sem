@@ -1,3 +1,4 @@
+## Функция для вычисления сумм диагоналей квадратной матрицы
 def diagonal_sums(matrix):
     size = len(matrix)
     if any(len(row) != size for row in matrix):

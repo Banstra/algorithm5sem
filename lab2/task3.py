@@ -1,5 +1,5 @@
 import math
-
+# Даны координаты трех точек A, B и C на плоскости. Найти, какая из точек B или C ближе к точке A.
 ax, ay = map(float, input("Введите координаты точки A (x y): ").split())
 bx, by = map(float, input("Введите координаты точки B (x y): ").split())
 cx, cy = map(float, input("Введите координаты точки C (x y): ").split())
